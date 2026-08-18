@@ -22,7 +22,7 @@ func TestSplit(t *testing.T) {
 		"no space to split": {
 			authHeader: "abc123",
 			setHeader:  true,
-			wantErr:    "wrong-value", //malformed authorization header
+			wantErr:    "malformed authorization header", //malformed authorization header
 		},
 		"header missing": {
 			setHeader: false,
