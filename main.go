@@ -96,6 +96,6 @@ func main() {
 		ReadHeaderTimeout: 5 * time.Second,
 	}
 	sanitizedPort := strings.ReplaceAll(strings.ReplaceAll(port, "\n", ""), "\r", "")
-	log.Printf("Serving on port: %s\n", &sanitizedPort)
+	log.Printf("Serving on port: %s\n", sanitizedPort)
 	log.Fatal(srv.ListenAndServe())
 }
